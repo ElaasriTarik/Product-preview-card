@@ -1,0 +1,158 @@
+:root {
+  --card-bg: hsl(0, 0%, 100%);
+  --body: hsl(30, 38%, 92%);
+  --btn-clr: hsl(158, 36%, 37%);
+  --title-clr: hsl(212, 21%, 14%);
+  --text-clr: hsl(228, 12%, 48%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  font-family: Trebuchet MS;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.container {
+  max-width: 500px;
+  max-height: 390px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border-radius: 8px;
+  background-color: var(--card-bg);
+  margin: 20px 0;
+}
+.img-card {
+  min-width: 50%;
+  min-height: 100%;
+  background-image: url("images/image-product-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.img-card img {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/image-product-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.prices {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.perfume-info {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.perfume-info > * {
+  margin-bottom: -5px;
+}
+.label {
+  font-family: monospace;
+}
+.label, .desc, s {
+  color: var(--text-clr);
+}
+.thisPrice {
+  font-size: 33px;
+  color: var(--btn-clr);
+}
+.addToCard {
+  width: calc(100% - 30px);
+  height: 35px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+margin-top: -10px;
+}
+.cartLogo {
+  position: absolute;
+  left: 37px;
+  top: 20%;
+  width: 18px;
+  z-index: 100;
+}
+.addToCard button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--btn-clr);
+  position: relative;
+  border: 0;
+  outline: 0;
+  color: var(--card-bg);
+  font-weight: 700;
+  cursor: pointer;
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 280px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+  }
+  .img-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100px;
+    background-image: url("images/image-product-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+.img-card:after {
+  content: '';
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: block;
+  opacity: 0.4;
+}
+  .perfume-info {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  h1{
+    color: var(--card-bg);
+    -webkit-text-stroke: 0.3px var(--btn-clr);
+  }
+  .label, .desc {
+    color: hsl(210.5, 100%, 90.8%);
+  }
+  .prices p{
+     -webkit-text-stroke: 0.3px var(--card-bg);
+     color: hsl(158.2, 100%, 84.3%);
+  }
+  .label {
+    font-size: 20px;
+    color: hsl(211.3, 33.3%, 86.5%);
+  }
+  .prices s{
+
+  }
+}
